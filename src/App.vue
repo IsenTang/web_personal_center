@@ -1,10 +1,8 @@
-<script setup lang="ts">
-const a = ref(1);
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
-    {{ a }}
+    <RouterView></RouterView>
   </div>
 </template>
 

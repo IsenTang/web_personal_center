@@ -11,6 +11,9 @@
     "target": "ESNext",
     "moduleResolution": "node",
     "strict": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "types": ["element-plus/global"]
   },
   "exclude": ["node_modules"]

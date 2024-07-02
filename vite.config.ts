@@ -33,8 +33,9 @@ export default defineConfig({
       // Custom resolvers, compatible with `unplugin-vue-components`
       // see https://github.com/antfu/unplugin-auto-import/pull/23/
       resolvers: [ElementPlusResolver()],
+      dirs: ['./src/utils'],
 
-      vueTemplate: true,
+      // vueTemplate: true,
       injectAtEnd: true,
       eslintrc: {
         enabled: true // <-- this

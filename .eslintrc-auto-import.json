@@ -288,6 +288,23 @@
     "watchThrottled": true,
     "watchTriggerable": true,
     "watchWithFilter": true,
-    "whenever": true
+    "whenever": true,
+    "log": true,
+    "getSearchParam": true,
+    "loadRemoteJs": true,
+    "is24H": true,
+    "isArray": true,
+    "isChineseIdCard": true,
+    "isDomain": true,
+    "isEmail": true,
+    "isExternal": true,
+    "isIPv4": true,
+    "isLicensePlate": true,
+    "isMAC": true,
+    "isPhoneNumber": true,
+    "isString": true,
+    "isUrl": true,
+    "isUrlPort": true,
+    "isVersion": true
   }
 }
