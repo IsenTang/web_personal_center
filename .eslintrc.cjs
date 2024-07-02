@@ -15,5 +15,9 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest'
+  },
+  rules: {
+    // * 不同系统换行符自动
+    'prettier/prettier': ['error', { endOfLine: 'auto' }]
   }
 };

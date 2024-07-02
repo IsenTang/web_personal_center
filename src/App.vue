@@ -4,7 +4,9 @@ const a = ref(1);
 
 <template>
   <div>
-    <el-button>1111</el-button>
+    {{ a }}
+
+    <a-test></a-test>
   </div>
 </template>
 

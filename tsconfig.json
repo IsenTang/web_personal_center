@@ -1,5 +1,4 @@
 {
-  "include": ["./components.d.ts", "./auto-imports.d.ts", "src/**/*.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
@@ -9,7 +8,10 @@
     }
   ],
   "compilerOptions": {
+    "target": "ESNext",
     "moduleResolution": "node",
+    "strict": true,
     "types": ["element-plus/global"]
-  }
+  },
+  "exclude": ["node_modules"]
 }

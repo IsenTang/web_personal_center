@@ -6,5 +6,6 @@ module.exports = {
   trailingComma: 'none',
   printWidth: 120, // * 单行输出（不折行）的（最大）长度
   arrowParens: 'avoid', // * 箭头函数参数括号
-  proseWrap: 'always' // * 当超出print width时就折行
+  proseWrap: 'always', // * 当超出print width时就折行
+  endOfLine: 'auto' // * 不同系统换行符自动
 };

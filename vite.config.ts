@@ -25,29 +25,22 @@ export default defineConfig({
         /\.vue\?vue/, // .vue
         /\.md$/ // .md
       ],
+      dts: true,
 
       // global imports to register
       imports: ['vue', 'vue-router', '@vueuse/core'],
-
-      // Filepath to generate corresponding .d.ts file.
-      // Defaults to './auto-imports.d.ts' when `typescript` is installed locally.
-      // Set `false` to disable.
-      dts: './auto-imports.d.ts',
 
       // Custom resolvers, compatible with `unplugin-vue-components`
       // see https://github.com/antfu/unplugin-auto-import/pull/23/
       resolvers: [ElementPlusResolver()],
 
-      // Generate corresponding .eslintrc-auto-import.json file.
-      // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
+      vueTemplate: true,
+      injectAtEnd: true,
       eslintrc: {
-        enabled: true, // Default `false`
-        filepath: './.eslintrc-auto-import.json' // Default `./.eslintrc-auto-import.json`
-      },
-      vueTemplate: true
+        enabled: true // <-- this
+      }
     }),
     Components({
-      dts: true,
       resolvers: [ElementPlusResolver()]
     })
   ],
