@@ -1,19 +1,39 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
+
+const Layouts = () => import('@/layout/index.vue');
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/login',
+    component: () => import('@/views/login/index.vue'),
+    meta: {
+      hidden: true
+    }
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/AboutView.vue')
+    path: '/',
+    component: Layouts,
+    redirect: '/dashboard',
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index.vue'),
+        name: 'Dashboard',
+        meta: {
+          title: '首页',
+          keepAlive: true
+        }
+      },
+      {
+        path: 'user',
+        component: () => import('@/views/user/index.vue'),
+        name: 'User',
+        meta: {
+          title: '用户',
+          keepAlive: true
+        }
+      }
+    ]
   }
 ];
 

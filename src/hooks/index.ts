@@ -1,2 +1,2 @@
-export { useLoading } from './useLoading';
-export { useCancelRequest } from './useCancelRequests';
+export * from './useLoading';
+export * from './useCancelRequests';

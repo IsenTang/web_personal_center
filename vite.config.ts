@@ -16,7 +16,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     // Inspect(),
-    // * 自动导入，vue vue-router
+    // * 自动导入，vue vue-router vue-use
     AutoImport({
       // targets to transform
       include: [
@@ -28,7 +28,15 @@ export default defineConfig({
       dts: true,
 
       // global imports to register
-      imports: ['vue', 'vue-router', '@vueuse/core'],
+      imports: [
+        'vue',
+        'vue-router',
+        '@vueuse/core',
+        '@vueuse/math',
+        'pinia',
+        { '@/libs/dayjs': [['dayjs', 'dayjs']] },
+        { '@/libs/lodash': [['_', '_']] }
+      ],
 
       // Custom resolvers, compatible with `unplugin-vue-components`
       // see https://github.com/antfu/unplugin-auto-import/pull/23/
