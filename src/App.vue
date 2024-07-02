@@ -5,8 +5,6 @@ const a = ref(1);
 <template>
   <div>
     {{ a }}
-
-    <a-test></a-test>
   </div>
 </template>
 
